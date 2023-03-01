@@ -33,7 +33,6 @@ export default function App() {
 
 	return (
 		<>
-			<BrowserRouter>
 				<Routes>
 					<Route
 						exact
@@ -107,7 +106,6 @@ export default function App() {
 						}
 					/>
 				</Routes>
-			</BrowserRouter>
 		</>
 	);
 }
