@@ -5,7 +5,7 @@ import '../css-files/acoustic.css'
 
 export default function Acoustic(props) {
   return (
-    <div id="acoustic">
+    <div id={props.transition ? 'acoustic' : 'acoustic off'}>
 		<div className="title">
 			<b>acustică.</b>
 		</div>

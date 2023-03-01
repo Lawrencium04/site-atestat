@@ -67,7 +67,7 @@ export default function App() {
 										},
 										particles: {
 											number: {
-												value: 100,
+												value: 120,
 												density: { 
 													enable: true, 
 													area: 600 
@@ -75,13 +75,13 @@ export default function App() {
 											},
 
 											color: {
-												value: "#000",
+												value: "#808080",
 											},
 
 											links: {
                                                 distance: 120,
 												color: {
-													value: "#000",
+													value: "#808080",
 												},
 												enable: true,
 												opacity: 0.5,
@@ -89,7 +89,7 @@ export default function App() {
 
 											move: {
 												enable: true,
-                                                speed: 0.9
+                                                speed: 0.3
 											},
 
 											opacity: {

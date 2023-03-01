@@ -8,6 +8,16 @@
 	}
 }
 
+@keyframes moveOut {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, -10%, 0);
+	}
+}
+
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
@@ -18,11 +28,25 @@
 	}
 }
 
-#acoustic {
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+#acoustic, div[id='acoustic off'] {
 	display: flex;
 	width: calc(100vw - 70px);
 	height: calc(100vh - 74px);
-	animation: fadeIn 0.8s ease-in-out, moveIn 0.8s ease-in-out forwards;
+	animation: fadeIn 0.5s ease-in-out, moveIn 0.5s ease-in-out forwards;
+}
+
+div[id='acoustic off'] {
+	animation: fadeOut 0.5s ease-in-out forwards, moveOut 0.5s ease-in-out forwards;
 }
 
 .title b {
@@ -47,13 +71,18 @@
 	align-content: center;
 	align-self: center;
 	opacity: 0;
-	animation: fadeIn 0.5s ease-in-out 0.8s forwards;
+	animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
 .guitar .pic,
 .guitar .pic-notes {
 	width: 55vw;
 	min-width: 50px;
+}
+
+.guitar .pic-notes {
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in-out 1s forwards;
 }
 
 .guitar .pic {
