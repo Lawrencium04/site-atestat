@@ -1,0 +1,65 @@
+@keyframes moveIn {
+	0% {
+		transform: translate3d(0, -10%, 0);
+	}
+
+	100% {
+		transform: translate3d(auto, 0, auto);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+#acoustic {
+	display: flex;
+	width: calc(100vw - 70px);
+	height: calc(100vh - 74px);
+	animation: fadeIn 0.8s ease-in-out, moveIn 0.8s ease-in-out forwards;
+}
+
+.title b {
+	right: 30px;
+    top: 20px;
+	padding: 0px calc(0.5vh + 0.5vw) 2px calc(0.5vh + 0.5vw);
+	position: absolute;
+	height: max-content;
+	width: fit-content;
+	background-color: black;
+	color: white;
+	text-align: right;
+	text-decoration-thickness: calc(0.2vw + 0.2vh);
+	text-decoration: underline;
+	text-underline-offset: calc(0.18vw + 0.18vh);
+	font-size: calc(2vw + 2vh);
+}
+
+.guitar {
+	display: flex;
+	position: absolute;
+	align-content: center;
+	align-self: center;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in-out 0.8s forwards;
+}
+
+.guitar .pic,
+.guitar .pic-notes {
+	width: 55vw;
+	min-width: 50px;
+}
+
+.guitar .pic {
+	position: absolute;
+	z-index: -1;
+	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
+		drop-shadow(13.5px 13.5px 13px #2c2b2c38)
+		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
+}

@@ -1,0 +1,45 @@
+body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior:smooth
+}
+
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+@media only screen and (max-width: 900px) {
+	#root {
+		margin: 0px 20px !important;
+	}
+}
+
+#root {
+	display: grid;
+	width: 69%;
+	grid-template-rows: fit-content auto 2vh;
+	padding: 0;
+	margin: 0px 35px;
+	font-family: Roboto Mono;
+	user-select: none;
+}
+
+.background {
+	position:absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+
+
+#particles {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -10;
+}
