@@ -50,21 +50,6 @@ export default function App() {
 									loaded={particlesLoaded}
 									params={{
                                         fps_limit: 60,
-                                        interactivity: {
-                                            detect_on: "window",
-                                            events: {
-                                                onHover: {
-                                                    enable: false,
-                                                    mode: "repulse",
-                                                }
-                                            },
-                                            modes: {
-                                                repulse: { distance: 130, duration: 0.4, factor: 8 }
-                                            },
-                                        },
-										background: {
-											opacity: 1,
-										},
 										particles: {
 											number: {
 												value: 120,

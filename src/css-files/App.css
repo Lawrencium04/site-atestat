@@ -22,6 +22,7 @@ body::-webkit-scrollbar {
 	#root {
 		margin: 0px 20px !important;
 	}
+
 }
 
 #root {
@@ -41,8 +42,6 @@ body::-webkit-scrollbar {
 	left: 0;
 	z-index: 0;
 }
-
-
 
 #particles {
 	display: block;

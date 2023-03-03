@@ -1,6 +1,29 @@
+@media only screen and (max-width: 600px) {
+	.txt1, .txt2 {
+		justify-items: center !important;
+		text-align: center !important;
+		justify-self: center !important;
+		left: auto !important;
+		right: auto !important;
+		font-size: calc(3vw + 4vh - 5px) !important;
+	}
+
+	.txt1 {
+		top: 0 !important;
+	}
+}
+
 @media only screen and (max-width: 900px) {
-	#home {
-		display: none !important;
+	#home, div[id='home off'] {
+		width: calc(100vw - 40px) !important;
+		margin-left: -20px;
+		padding: 0px 20px;
+		place-items: center;
+	}
+
+	.images img{
+		height: calc(8vw + 10vh - 5px) !important;
+		margin: 0px min(-80px, -13vh) !important;
 	}
 }
 

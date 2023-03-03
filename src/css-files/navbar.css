@@ -21,34 +21,19 @@
 @media only screen and (max-width: 900px) {
 	.Navbar,
 	.Navbar.mobile {
-		width: calc(100% - 40px) !important;
-		position: fixed;
-		align-items: center;
-		left: 50%;
-		transform: translateX(-50%);
+		width: calc(100vw - 40px) !important;
+		margin-left: -20px;
 		z-index: 10;
+		padding: 7px 20px !important;
+		transition: background-color 0.3s ease-in-out !important;
+		background-color: rgba(255, 255, 255, 0);
 	}
 
 	.Navbar.mobile {
 		display: grid;
 		grid-template-columns: min-content auto min-content !important;
-		grid-template-rows: min-content max-content !important;
-	}
-
-	.Navbar .links {
-		display: flex !important;
-		position: relative;
-		justify-content: space-evenly;
-		justify-self: center;
-		grid-area: links;
-		align-items: center;
-		margin: 0;
-		width: calc(100% - 40px) !important;
-		height: 0%;
-		transition: border-bottom 0.5s ease-in-out 0.3s,
-			height 0.3s ease-in-out 0.3s;
-		border-bottom: 1px solid rgba(59, 59, 59, 0);
-		padding: 0px 20px;
+		grid-template-rows: min-content auto !important;
+		background-color: rgb(255, 255, 255);
 	}
 
 	.Navbar .icon {
@@ -70,26 +55,45 @@
 		grid-row: 1;
 	}
 
+	.Navbar .links {
+		pointer-events: none;
+		display: grid !important;
+		position: absolute;
+		top: 70px;
+		grid-row: none;
+		justify-content: space-around;
+		justify-self: center;
+		margin: 0;
+		width: calc(100% - 40px) !important;
+		height: min-content;
+		transition: border-bottom 0.3s ease-in-out,
+					background-color 0.3s ease-in-out,
+					opacity 0.3s ease-in-out;
+		border-bottom: 1px solid rgba(59, 59, 59, 0);
+		padding: 0px 20px;
+		z-index: -1;
+		padding-bottom: 10px;
+	}
+
 	.Navbar.mobile .links {
-		height: 100%;
+		pointer-events: all;
 		border-bottom: 1px solid rgba(59, 59, 59, 1);
-		transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out,
-			border-bottom 0.5s ease-in-out;
+		background-color: white;
 	}
 
 	.Navbar .links li,
 	.Navbar.mobile .links li {
-		margin: 0px 15px 10px 15px;
+		margin: 5px 15px 5px 15px;
+		justify-self: center;
 	}
 
 	.Navbar .links li {
 		opacity: 0;
-		transition: all 0.3s ease-in-out 0.13s;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.Navbar, .Navbar.mobile .links li {
 		opacity: 1;
-		transition: all 0.3s ease-in-out 0.1s;
 	}
 }
 
