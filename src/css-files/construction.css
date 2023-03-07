@@ -1,0 +1,64 @@
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
+
+@keyframes moveOut {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, -10%, 0);
+	}
+}
+
+
+#construction, div[id="construction off"] {
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto 90vw auto;
+    grid-template-rows: auto;
+}
+
+div[id="construction off"] {
+	animation: fadeOut 0.5s ease-in-out forwards, moveOut 0.5s ease-in-out forwards;
+}
+
+.arrow-left, .arrow-right {
+    position: relative;
+    width: 100%;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    opacity: 1;
+}
+
+.arrow-left img {
+    width: 60%;
+    transform: rotate(90deg);
+}
+
+.arrow-right img {
+    width: 60%;
+    transform: rotate(-90deg);
+}

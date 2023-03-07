@@ -29,9 +29,8 @@ export default function Navbar(props) {
             <img className="logo" src={logo} alt=''/>
             <ul className="links" id="Links">
                 <NavButton id={1} index={index} onClick={() => changePage(1)} label="ACASĂ"/>
-                <NavButton id={2} index={index} onClick={() => changePage(2)} label="ACUSTICE"/>
-                <NavButton id={3} index={index} onClick={() => changePage(3)} label="CLASICE"/>
-                <NavButton id={4} index={index} onClick={() => changePage(4)} label="ELECTRICE"/>
+                <NavButton id={2} index={index} onClick={() => changePage(2)} label="CONSTRUCȚIE"/>
+                <NavButton id={3} index={index} onClick={() => changePage(3)} label="TOPURI"/>
             </ul>
             <div href="/" className="icon" onClick={handleMenuButton}>
                 <img src={icon} alt=""/>

@@ -1,15 +1,15 @@
 import React, { useState, useCallback } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./home";
-import Acoustic from "./acoustic";
+import Construction from "./construction";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import "../css-files/App.css";
 import Navbar from "../js-files/navbar.js";;
 
 export default function App() {
-	let [transition, setTransition] = useState(true);
-	let [page, setPage] = useState(1);
+	let [transition, setTransition] = useState(false);
+	let [page, setPage] = useState(2);
 
 	const particlesInit = useCallback(async (engine) => {
 		console.log(engine);
@@ -24,9 +24,12 @@ export default function App() {
 	}, []);
 
 	function nextPage(index) {
-		setTransition(false);
+		if (index === page)
+			return;
+			
+		setTransition(true);
 		setTimeout(() => {
-			setTransition(true);
+			setTransition(false);
 			setPage(index);
 		}, 500);
 	}
@@ -41,9 +44,8 @@ export default function App() {
 							<>
 								<Navbar setPage={(index) => nextPage(index)} />
 								{page === 1 && <Home transition={transition}/>}
-								{page === 2 && <Acoustic transition={transition}/>}
+								{page === 2 && <Construction transition={transition}/>}
 								{page === 3 && <Home transition={transition}/>}
-								{page === 4 && <Home transition={transition}/>}
 								<Particles
 									id="particles"
 									init={particlesInit}

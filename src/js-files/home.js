@@ -8,7 +8,7 @@ import arrow_down from '../assets/svg/arrow-down.svg'
 export default function Home(props) {
 	return (
 		<>
-			<div id={props.transition ? 'home' : 'home off'}>
+			<div id={!props.transition ? 'home' : 'home off'}>
 				<div className="images">
 					<div className="img1">
 						<img src={acoustic} alt="" />

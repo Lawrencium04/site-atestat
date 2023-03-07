@@ -38,20 +38,21 @@
 	}
 }
 
-#acoustic, div[id='acoustic off'] {
+.acoustic, .acoustic.selected, .acoustic.off {
 	display: flex;
-	width: calc(100vw - 70px);
+	width: calc(90vw);
 	height: calc(100vh - 74px);
 	animation: fadeIn 0.5s ease-in-out, moveIn 0.5s ease-in-out forwards;
+	justify-self: center;
 }
 
-div[id='acoustic off'] {
+.acoustic.off {
 	animation: fadeOut 0.5s ease-in-out forwards, moveOut 0.5s ease-in-out forwards;
 }
 
-.title b {
-	right: 30px;
-    top: 20px;
+.acoustic .title b, .acoustic.selected .title b {
+	left: 50%;
+	transform: translateX(-50%);
 	padding: 0px calc(0.5vh + 0.5vw) 2px calc(0.5vh + 0.5vw);
 	position: absolute;
 	height: max-content;
@@ -62,33 +63,92 @@ div[id='acoustic off'] {
 	text-decoration-thickness: calc(0.2vw + 0.2vh);
 	text-decoration: underline;
 	text-underline-offset: calc(0.18vw + 0.18vh);
+	font-size: calc(3vw + 3vh);
+	transition: all 0.3s ease;
+}
+
+.acoustic.selected .title b {
+	left: unset;
+	transform: translate(0, 0);
+	right: 0;
 	font-size: calc(2vw + 2vh);
 }
 
-.guitar {
+.acoustic .guitar{
 	display: flex;
-	position: absolute;
-	align-content: center;
-	align-self: center;
-	opacity: 0;
+	position: relative;
+	top: 50%;
+	right: -50%;
+	transform: translate(-50%, -50%);
 	animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+	height: 40vw;
+	transition: all 0.3s ease;
 }
 
-.guitar .pic,
-.guitar .pic-notes {
-	width: 55vw;
-	min-width: 50px;
-}
-
-.guitar .pic-notes {
-	opacity: 0;
-	animation: fadeIn 0.5s ease-in-out 1s forwards;
+.acoustic.selected .guitar {
+	display: flex;
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 35vw;
 }
 
 .guitar .pic {
-	position: absolute;
-	z-index: -1;
+	width: auto;
+	position: relative;
 	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
 		drop-shadow(13.5px 13.5px 13px #2c2b2c38)
 		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
+}
+
+.guitar .body-select {
+	display: flex;
+	position: absolute;
+	align-self: center;
+	height: 80%;
+	width: 47%;
+	margin-top: -1%;
+	border: 0.15vw dashed rgba(0, 0, 0, 0.65);
+	opacity: 0;
+	border-radius: 1vw;
+	transition: all 0.3s ease-in-out;
+	scale: 1.1;
+	cursor: pointer;
+}
+
+.guitar .neck-select {
+	display: flex;
+	position: absolute;
+	align-self: center;
+	height: 14%;
+	width: 43%;
+	margin-top: -1%;
+	right: 22%;
+	border: 0.15vw dashed rgba(0, 0, 0, 0.65);
+	opacity:0;
+	border-radius: 0.5vw;
+	transition: all 0.3s ease-in-out;
+	scale: 1.1;
+	cursor: pointer;
+}
+
+.guitar .headstock-select {
+	display: flex;
+	position: absolute;
+	align-self: center;
+	height: 25%;
+	width: 16%;
+	margin-top: -1%;
+	right: 7.5%;
+	border: 0.15vw dashed rgba(0, 0, 0, 0.65);
+	opacity:0;
+	border-radius: 0.5vw;
+	transition: all 0.3s ease-in-out;
+	scale: 1.1;
+	cursor: pointer;
+}
+
+.guitar .body-select:hover, .guitar .neck-select:hover, .guitar .headstock-select:hover {
+	opacity: 1;
+	scale: 1;
 }
