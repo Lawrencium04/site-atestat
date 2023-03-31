@@ -1,11 +1,15 @@
-body {
+html, body {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
-    scroll-behavior:smooth
+    scroll-behavior:smooth;
+	max-width: 100%;
+    overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 body::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+	overflow: none;
 }
 
 @keyframes fadeIn {
@@ -23,16 +27,21 @@ body::-webkit-scrollbar {
 		margin: 0px 20px !important;
 	}
 
+	html, body {
+		overflow-y: visible !important;
+	}
+
 }
 
 #root {
 	display: grid;
-	width: 69%;
-	grid-template-rows: fit-content auto 2vh;
-	padding: 0;
+	width: auto;
+	grid-template-rows: fit-content auto;
 	margin: 0px 35px;
 	font-family: Roboto Mono;
 	user-select: none;
+	justify-items: center;
+	overflow-x: none;
 }
 
 .background {

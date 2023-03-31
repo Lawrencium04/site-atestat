@@ -28,12 +28,28 @@
 	}
 }
 
+@media only screen and (max-width: 900px) {
+	#construction, div[id="construction off"] {
+		grid-template-columns: 100% !important;
+		grid-template-rows: auto !important;
+	}
+
+	.arrow-left, .arrow-right {
+		display: none !important;
+	}
+}
+
 
 #construction, div[id="construction off"] {
     display: grid;
+	position: relative;
     place-items: center;
+	justify-content: center;
     grid-template-columns: auto 90vw auto;
     grid-template-rows: auto;
+	margin: auto auto;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 div[id="construction off"] {
@@ -41,7 +57,9 @@ div[id="construction off"] {
 }
 
 .arrow-left, .arrow-right {
+	display: flex;
     position: relative;
+	justify-self: center;
     width: 100%;
     opacity: 0.5;
     transition: all 0.3s ease-in-out;
@@ -54,11 +72,11 @@ div[id="construction off"] {
 }
 
 .arrow-left img {
-    width: 60%;
+    height: calc(1.3vw + 1.3vh);
     transform: rotate(90deg);
 }
 
 .arrow-right img {
-    width: 60%;
+    height: calc(1.3vw + 1.3vh);
     transform: rotate(-90deg);
 }

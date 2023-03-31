@@ -16,7 +16,6 @@
 @media only screen and (max-width: 900px) {
 	#home, div[id='home off'] {
 		width: calc(100vw - 40px) !important;
-		margin-left: -20px;
 		padding: 0px 20px;
 		place-items: center;
 	}
@@ -88,10 +87,11 @@
 }
 
 #home, div[id='home off'] {
+	width: 94%;
+	box-sizing: border-box;
 	display: flex;
 	place-content: center;
 	justify-self: center;
-	width: calc(90vw);
 	height: calc(100vh - 74px);
 	animation: moveIn 0.5s ease-in-out forwards;
 	transition: opacity	0.5s ease-in-out;
@@ -200,11 +200,11 @@ div[id='home off']{
 
 .txt1 b,
 .txt2 b {
-	color: white;
-	background-color: black;
-	text-decoration: underline;
+	border: calc(0.2vw + 0.2vh) solid black;
+	border-radius: calc(0.8vw + 0.8vh);
+	box-shadow: calc(0.3vw + 0.3vh) calc(0.4vw + 0.4vh) black;
+	background-color: white;
 	padding: 0px calc(0.5vh + 0.5vw) 2px calc(0.5vh + 0.5vw);
-	text-decoration-thickness: calc(0.33vw + 0.33vh);
-	text-underline-offset: calc(0.3vw + 0.3vh);
 	width: fit-content;
+	font-weight: 400;
 }
