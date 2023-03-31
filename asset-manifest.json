@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site-atestat/static/css/main.dcab1ddc.css",
-    "main.js": "/site-atestat/static/js/main.6dd1ad74.js",
+    "main.css": "/site-atestat/static/css/main.40a0dd99.css",
+    "main.js": "/site-atestat/static/js/main.afb6fe11.js",
     "static/media/acoustic.png": "/site-atestat/static/media/acoustic.84b18a9195ed59e1f83d.png",
     "static/media/const_acoustic.png": "/site-atestat/static/media/const_acoustic.9f1d951963ebf6bd2d33.png",
     "static/media/classic.png": "/site-atestat/static/media/classic.41e37135e1a05a28dcac.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/site-atestat/static/media/logo.a0d9b8b7dc4793d98b13117afeb89cdc.svg",
     "index.html": "/site-atestat/index.html",
     "static/media/arrow-down.svg": "/site-atestat/static/media/arrow-down.1edfab86f389055c97b80ec14e52f85c.svg",
-    "main.dcab1ddc.css.map": "/site-atestat/static/css/main.dcab1ddc.css.map",
-    "main.6dd1ad74.js.map": "/site-atestat/static/js/main.6dd1ad74.js.map"
+    "main.40a0dd99.css.map": "/site-atestat/static/css/main.40a0dd99.css.map",
+    "main.afb6fe11.js.map": "/site-atestat/static/js/main.afb6fe11.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcab1ddc.css",
-    "static/js/main.6dd1ad74.js"
+    "static/css/main.40a0dd99.css",
+    "static/js/main.afb6fe11.js"
   ]
 }
