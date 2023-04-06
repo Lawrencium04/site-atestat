@@ -14,12 +14,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-	#home, div[id='home off'] {
-		width: calc(100vw - 40px) !important;
-		padding: 0px 20px;
-		place-items: center;
-	}
-
 	.images img{
 		height: calc(8vw + 10vh - 5px) !important;
 		margin: 0px min(-80px, -13vh) !important;
@@ -28,21 +22,21 @@
 
 @keyframes moveDown {
 	0% {
-		transform: rotate(-90deg) translateX(20%);
+		transform: rotate(-90deg) translateX(40%);
 	}
 
 	100% {
-		transform: rotate(-90deg) translateX(0%);
+		transform: rotate(-90deg) translateX(15%);
 	}
 }
 
 @keyframes moveUp {
 	0% {
-		transform: rotate(-90deg) translateX(-20%);
+		transform: rotate(-90deg) translateX(-40%);
 	}
 
 	100% {
-		transform: rotate(-90deg) translateX(0%);
+		transform: rotate(-90deg) translateX(-15%);
 	}
 }
 
@@ -88,11 +82,12 @@
 
 #home, div[id='home off'] {
 	width: 94%;
+	position: relative;
 	box-sizing: border-box;
 	display: flex;
 	place-content: center;
-	justify-self: center;
-	height: calc(100vh - 74px);
+	place-self: center;
+	height: 100%;
 	animation: moveIn 0.5s ease-in-out forwards;
 	transition: opacity	0.5s ease-in-out;
 }
@@ -102,15 +97,12 @@ div[id='home off']{
 }
 
 .images {
+	height: 100%;
 	display: grid;
-	grid-template-areas:
-	". . image3"
-	". image2 ."
-	"image1 . .";
+	position: absolute;
 	place-content: center;
-	grid-template-rows: repeat(3, calc(4vw + 3vh + 10px));
-	grid-template-columns: repeat(3, max-content);
-	margin-top: -100px;
+	grid-template-rows: min-content;
+	grid-template-columns: min-content min-content min-content;
 }
 
 .images img {
@@ -120,91 +112,67 @@ div[id='home off']{
 	min-height: 50px;
 	margin: 0px min(-80px, -14vh);
 	opacity: 0;
+	filter: drop-shadow(-7.7px 7.7px 5px #2c2b2c65)
+	drop-shadow(-13.5px 13.5px 13px #2c2b2c38)
+	drop-shadow(-23.3px 23.3px 19.9px #2c2b2c17);
 }
 
-.img1 > img {
-	animation: forwards moveDown 0.5s ease-in-out,
-		forwards fadeIn 0.5s ease-in-out;
-	animation-delay: 0.8s;
+.g-ac {
+	animation: forwards moveUp 0.5s ease-in-out,
+	forwards fadeIn 0.5s ease-in-out;
+animation-delay: 0.8s;
+	height: min-content;
+	display: flex;
+	place-content: center;
+	grid-column: 1;
 }
 
-.img2 > img {
+.g-cl {
 	animation: forwards fadeIn 0.5s ease-in-out;
 	animation-delay: 0.8s;
-}
-
-.img3 > img {
-	animation: forwards moveUp 0.5s ease-in-out,
-		forwards fadeIn 0.5s ease-in-out;
-	animation-delay: 0.8s;
-}
-
-.img1 {
 	display: flex;
 	place-content: center;
-	grid-area: image1;
-	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
-		drop-shadow(13.5px 13.5px 13px #2c2b2c38)
-		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
+	grid-column: 2;
 }
 
-.img2 {
+.g-el {
+	animation: forwards moveDown 0.5s ease-in-out,
+	forwards fadeIn 0.5s ease-in-out;
+animation-delay: 0.8s;
 	display: flex;
 	place-content: center;
-	grid-area: image2;
-	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
-		drop-shadow(13.5px 13.5px 13px #2c2b2c38)
-		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
+	grid-column: 3;
 }
 
-.img3 {
-	display: flex;
-	place-content: center;
-	grid-area: image3;
-	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
-		drop-shadow(13.5px 13.5px 13px #2c2b2c38)
-		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
-}
-
-.txt1 {
+.txt1, .txt2 {
 	display: grid;
 	position: absolute;
-	height: max-content;
-	text-align: right;
-	font-size: calc(4vw + 4vh - 15px);
-	font-weight: 300;
-	left: 0;
-	top: -15px;
+	height: min-content;
 	align-self: center;
-	z-index: -10;
+	font-weight: 300;
+	font-size: calc(3vw + 3vh);
+	font-family: Rubik, sans-serif;
+	text-transform: uppercase;
 	margin: 0;
 	opacity: 0;
 	animation: fadeIn 0.5s ease-in-out 0.1s forwards;
+	z-index: -10;
+}
+
+.txt1 {
+	left: 0;
+	top: -15px;
 }
 
 .txt2 {
-	display: grid;
-	position: absolute;
-	height: max-content;
-	text-align: right;
-	font-size: calc(4vw + 4vh - 15px);
-	font-weight: 300;
 	right: 0;
-	bottom: 57px;
-	align-self: center;
-	z-index: -10;
-	margin: 0;
-	opacity: 0;
-	animation: fadeIn 0.5s ease-in-out 0.2s forwards;
+	bottom: 37px;
+	text-align: right;
 }
 
 .txt1 b,
 .txt2 b {
-	border: calc(0.2vw + 0.2vh) solid black;
-	border-radius: calc(0.8vw + 0.8vh);
-	box-shadow: calc(0.3vw + 0.3vh) calc(0.4vw + 0.4vh) black;
-	background-color: white;
-	padding: 0px calc(0.5vh + 0.5vw) 2px calc(0.5vh + 0.5vw);
 	width: fit-content;
-	font-weight: 400;
+	font-weight: 800;
+	font-size: calc(3.2vw + 3.2vh);
 }

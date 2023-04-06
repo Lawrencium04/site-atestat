@@ -31,7 +31,7 @@
 @media only screen and (max-width: 900px) {
 	#construction, div[id="construction off"] {
 		grid-template-columns: 100% !important;
-		grid-template-rows: auto !important;
+		grid-template-rows: 100% !important;
 	}
 
 	.arrow-left, .arrow-right {
@@ -42,14 +42,13 @@
 
 #construction, div[id="construction off"] {
     display: grid;
-	position: relative;
     place-items: center;
-	justify-content: center;
+	place-content: center;
     grid-template-columns: auto 90vw auto;
-    grid-template-rows: auto;
-	margin: auto auto;
-	width: 100%;
+    grid-template-rows: 100%;
+	height: 100%;
 	box-sizing: border-box;
+	width: 100%;
 }
 
 div[id="construction off"] {

@@ -34,11 +34,11 @@ body::-webkit-scrollbar {
 }
 
 #root {
-	display: grid;
-	width: auto;
-	grid-template-rows: fit-content auto;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	margin: 0px 35px;
-	font-family: Roboto Mono;
+    font-family: Rubik;
 	user-select: none;
 	justify-items: center;
 	overflow-x: none;

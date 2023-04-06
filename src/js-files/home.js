@@ -10,22 +10,16 @@ export default function Home(props) {
 		<>
 			<div id={!props.transition ? 'home' : 'home off'}>
 				<div className="images">
-					<div className="img1">
-						<img src={acoustic} alt="" />
-					</div>
-					<div className="img2">
-						<img src={classic} alt="" />
-					</div>
-					<div className="img3">
-						<img src={electric} alt="" />
-					</div>
+						<img className="g-ac" src={acoustic} alt="" />
+						<img className="g-cl" src={classic} alt="" />
+						<img className="g-el" src={electric} alt="" />
 				</div>
 				<p className="txt1">
-					tot ce trebuie <br />
-					<b>să ști</b>
+					<b>tot ce trebuie</b>
+					să ști
 				</p>
 				<p className="txt2">
-					despre <br />
+					despre
 					<b>chitări.</b>
 				</p>
 			</div>

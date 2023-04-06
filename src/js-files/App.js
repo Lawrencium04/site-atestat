@@ -2,6 +2,7 @@ import React, { useState, useCallback } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./home";
 import Construction from "./construction";
+import Tops from "./tops";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import "../css-files/App.css";
@@ -9,7 +10,7 @@ import Navbar from "../js-files/navbar.js";;
 
 export default function App() {
 	let [transition, setTransition] = useState(false);
-	let [page, setPage] = useState(2);
+	let [page, setPage] = useState(3);
 
 	const particlesInit = useCallback(async (engine) => {
 		console.log(engine);
@@ -45,7 +46,7 @@ export default function App() {
 								<Navbar setPage={(index) => nextPage(index)} />
 								{page === 1 && <Home transition={transition}/>}
 								{page === 2 && <Construction transition={transition}/>}
-								{page === 3 && <Home transition={transition}/>}
+								{page === 3 && <Tops transition={transition}/>}
 								<Particles
 									id="particles"
 									init={particlesInit}

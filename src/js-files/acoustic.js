@@ -17,14 +17,12 @@ export default function Acoustic(props) {
 
   return (
     <div className={!props.transition ? 'acoustic' : 'acoustic off'}>
-		<div className="title">
-			<b>acustică.</b>
-		</div>
+		<div className="title">acustică.</div>
 		<div className="guitar">
 			<img className="pic" src={guitar} alt="" />
-			<span className={selected === 1 ? "body-select selected" : "body-select"} onClick={() => selectPart(1)}></span>
-			<span className={selected === 2 ? "neck-select selected" : "neck-select"} onClick={() => selectPart(2)}></span>
-			<span className={selected === 3 ? "headstock-select selected" : "headstock-select"} onClick={() => selectPart(3)} ></span>
+			<span className={selected === 1 ? "select body selected" : "select body"} onClick={() => selectPart(1)}></span>
+			<span className={selected === 2 ? "select neck selected" : "select neck"} onClick={() => selectPart(2)}></span>
+			<span className={selected === 3 ? "select headstock selected" : "select headstock"} onClick={() => selectPart(3)} ></span>
 		</div>
 		<div className="body-desc">
 			{selected === 0 && <p>selectează o <b>componentă</b> pentru a afișa <b>informații.</b></p>}

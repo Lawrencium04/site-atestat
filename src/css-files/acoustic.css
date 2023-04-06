@@ -39,53 +39,34 @@
 }
 
 @media only screen and (max-width: 900px) {
-
-	.acoustic, .acoustic.off {
-		grid-template-rows: min-content 50% auto !important; 
-		justify-self: center !important;
-		justify-content: center !important;
-	}
-
-	.acoustic .guitar {
-		grid-row: 2 !important;
-		justify-content: center !important;
-		justify-self: center !important;
-		align-self: center !important;
-		width: min-content !important;
-		box-sizing: border-box;
-		left: unset !important;
-	}
-
 	.guitar .pic {
-		width: min(calc(40vh + 40vw), 88vw) !important;
+		width: 90vw !important;
 	}
 
 	.acoustic .title {
-		grid-row: 1 !important;
-		position: unset !important;
-		justify-self: center !important;
+		font-size: calc(1.6vw + 1.6vh) !important;
 	}
 
-	.acoustic .title b {
-	font-size: calc(2.5vw + 2.5vh) !important;
-	}
-
-	.body-desc {
-		grid-row: 3 !important;
-		font-size: calc( 1vw + 1vh) !important;
-	}
 }
 
 .acoustic, .acoustic.off {
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: min-content auto;
-	width: 100%;
-	box-sizing: border-box;
-	height: calc(100vh - 74px);
+	grid-template-rows: min-content auto min-content;
+	grid-template-areas: 
+	"title"
+	"pic" 
+	"info";
+	height: max-content;
+	width: 97%;
+	height: 95%;
 	animation: fadeIn 0.5s ease-in-out, moveIn 0.5s ease-in-out forwards;
-	justify-self: center;
 	transition: all 0.3s ease;
+	background-color: white;
+	border: calc(0.08vw + 0.08vh) solid rgb(0, 0, 0);
+    border-radius: 1vw;
+	box-shadow: 0px calc(0.4vw + 0.4vh) black;
+	align-self: flex-start;
 }
 
 .acoustic.off {
@@ -93,67 +74,62 @@
 }
 
 .acoustic .title {
-	position: absolute;
-	grid-column: 1;
-	grid-row: 1;
-	justify-self: right;
-	transition: all 0.3s ease;
-}
-
-.acoustic .title b {
-	height: max-content;
-	width: fit-content;
-	border-radius: 1vw;
-	padding: 0px calc(0.5vh + 0.5vw) 2px calc(0.5vh + 0.5vw);
-	text-align: right;
-	font-size: calc(2vw + 2vh);
-	transition: all 0.3s ease;
-	font-weight: 400;
-	background-color: white;
-	border: calc(0.1vw + 0.1vh) solid black;
-	box-shadow: calc(0.3vw + 0.3vh) calc(0.4vw + 0.4vh) black;
+	text-align: center;
+	grid-area: title;
+	justify-content: center;
+    border-radius: 0.8vw 0.8vw 0 0;
+    background-color: white;
+    filter: invert(100%);
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 0px;
+    padding: calc(0.4vw + 0.4vh) 0px calc(0.25vw + 0.25vh) 0px;
+    border-bottom: calc(0.3vw + 0.3vh) double rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: calc(1.3vw + 1.3vh);
+	text-transform: uppercase;
 }
 
 .acoustic .guitar{
 	display: flex;
 	position: relative;
-	grid-column: 1;
-	grid-row: 1;
+	grid-area: pic;
 	left: 20px;
 	animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 	transition: all 0.3s ease;
 	justify-items: center;
+	place-self: center;
 	height: min-content;
 	width: min-content;
 }
 
 .body-desc {
-	padding: calc(0.5vw + 0.5vh) calc(1vw + 1vh);
-	margin-bottom: 5px;
-	border-radius: 1vw;
-	border: calc(0.08vw + 0.08vh) solid rgb(0, 0, 0);
-	justify-self: center;
-	align-self: center;
-	grid-row: 2;
-	grid-column: 1;
-	font-size: calc(0.8vh + 0.8vw);
+	display:flex;
+	height: min-content;
+	width: 100%;
+	border-top: calc(0.08vw + 0.08vh) solid rgb(0, 0, 0);
+	place-self: center;
+	place-content: center;
+	grid-area: info;
+	font-size: calc(1.5vh + 0.3vw);
 	transition: all 0.3s ease-in-out;
-	max-width: 90%;
 	text-align: center;
 	line-height: 150%;
 	box-sizing:border-box;
-	position: relative;
-	box-shadow: calc(0.2vw + 0.2vh) calc(0.3vw + 0.3vh) black;
-	background-color: white;
+	z-index: 3;
+}
+
+.body-desc p {
+	place-self: center;
+	max-width: 95%;
 }
 
 .body-desc b{
-	text-decoration: underline;
-	font-weight: 800;
+	font-weight: 700;
 }
 
 .guitar .pic {
-	width: calc(45vh + 45.5vw);
+	width: calc(40vh + 40vw);
 	object-fit:cover;
 	position: relative;
 	filter: drop-shadow(7.7px 7.7px 5px #2c2b2c65)
@@ -161,61 +137,44 @@
 		drop-shadow(23.3px 23.3px 19.9px #2c2b2c17);
 }
 
-.guitar .body-select {
+.guitar .select {
 	display: flex;
 	position: absolute;
 	align-self: center;
+	border: calc(0.08vw + 0.08vh) dashed rgba(0, 0, 0);
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	border-radius: 1vw;
+	opacity: 0;
+	scale: 1.1;
+	margin-top: -1.2%;
+}
+
+.guitar .select.body {
 	height: 78%;
 	width: 46.5%;
-	margin-top: -1.2%;
 	right: 53.5%;
-	border: calc(0.11vw + 0.11vh) dashed rgba(0, 0, 0, 0.65);
-	opacity: 0;
-	border-radius: 1vw;
-	transition: all 0.3s ease-in-out;
-	scale: 1.1;
-	cursor: pointer;
 }
 
-.guitar .neck-select {
-	display: flex;
-	position: absolute;
-	align-self: center;
+.guitar .select.neck {
 	height: 13%;
 	width: 40.5%;
-	margin-top: -1.2%;
 	right: 23%;
-	border:calc(0.11vw + 0.11vh) dashed rgba(0, 0, 0, 0.65);
-	opacity:0;
-	border-radius: 0.5vw;
-	transition: all 0.3s ease-in-out;
-	scale: 1.1;
-	cursor: pointer;
 }
 
-.guitar .headstock-select {
-	display: flex;
-	position: absolute;
-	align-self: center;
+.guitar .select.headstock {
 	height: 23%;
 	width: 15%;
-	margin-top: -1.2%;
 	right: 8%;
-	border: calc(0.11vw + 0.11vh) dashed rgba(0, 0, 0, 0.65);
-	opacity:0;
-	border-radius: 0.5vw;
-	transition: all 0.3s ease-in-out;
-	scale: 1.1;
-	cursor: pointer;
 }
 
-.body-select.selected, .neck-select.selected, .headstock-select.selected {
+.guitar .selected {
 	scale: 1;
 	opacity: 1;
-	border: calc(0.11vw + 0.11vh) dashed rgba(0, 0, 0, 0.87);
+	border: calc(0.11vw + 0.11vh) solid rgba(0, 0, 0, 0.87);
 }
 
-.guitar .body-select:hover, .guitar .neck-select:hover, .guitar .headstock-select:hover {
+.guitar .select.body:hover, .select.neck:hover, .select.select.headstock:hover {
 	opacity: 1;
 	scale: 1;
 }
