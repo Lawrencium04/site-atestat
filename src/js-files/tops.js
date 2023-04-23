@@ -1,5 +1,6 @@
 import React from "react";
 import "../css-files/tops.css"
+import Strat from "../assets/png/electric.png"
 
 export default function Tops(props) {
     return (
@@ -7,7 +8,7 @@ export default function Tops(props) {
             <div id={!props.transition ? 'tops' : 'tops off'}>
                 <div className="title"><p><b>Topuri ale chitărilor</b> <br></br> în funcție de diferite caracteristici.</p></div>
                 <div className="top shape">
-                    <p>- FORMĂ -</p>
+                    <p>FORMĂ</p>
                     <ol>
                         <li>Fender Stratocaster</li>
                         <li>Fender Telecaster</li>

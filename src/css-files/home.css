@@ -149,7 +149,7 @@ animation-delay: 0.8s;
 	position: absolute;
 	height: min-content;
 	align-self: center;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: calc(3vw + 3vh);
 	font-family: Rubik, sans-serif;
 	text-transform: uppercase;
