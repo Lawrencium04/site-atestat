@@ -28,54 +28,78 @@
 	}
 }
 
-@media only screen and (max-width: 900px) {
-	#construction, div[id="construction off"] {
-		grid-template-columns: 100% !important;
-		grid-template-rows: 100% !important;
-	}
-
-	.arrow-left, .arrow-right {
-		display: none !important;
-	}
-}
 
 
-#construction, div[id="construction off"] {
+#structure {
     display: grid;
-    place-items: center;
-	place-content: center;
-    grid-template-columns: auto 90vw auto;
-    grid-template-rows: 100%;
-	height: 100%;
+	grid-template-columns: repeat(2, 47vw);
+	height: 100vh;
 	box-sizing: border-box;
-	width: 100%;
+	flex-direction: row;
 }
 
-div[id="construction off"] {
-	animation: fadeOut 0.5s ease-in-out forwards, moveOut 0.5s ease-in-out forwards;
+img:not(img[id="arrL disabled"], img[id="arrR disabled"]) {
+	opacity: 0;
+	animation: fadeIn ease-in-out 0.4s forwards;
 }
 
-.arrow-left, .arrow-right {
+
+#arrL, #arrR, img[id="arrL disabled"], img[id="arrR disabled"] {
+	position: absolute;
+	width: 30px;
+	grid-row: 1;
+	align-self: center;
+	padding: 0px 10px;
+	cursor: pointer;
+	transition: width ease-in-out 0.1s;
+	z-index: 5;
+}
+
+#arrL:hover, #arrR:hover {
+	width: 40px;
+}
+
+#arrL, img[id="arrL disabled"] {
+	grid-column: 1;
+}
+
+#arrR, img[id="arrR disabled"] {
+	grid-column: 2;
+	justify-self: flex-end;
+}
+
+img[id="arrL disabled"], img[id="arrR disabled"] {
+	opacity: 30%;
+	cursor: unset;
+}
+
+#structure .guitar {
 	display: flex;
-    position: relative;
-	justify-self: center;
-    width: 100%;
-    opacity: 0.5;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    animation: fadeIn 0.3s ease-in-out;
+	grid-row: 1;
+	justify-self: flex-end;
+	align-self: center;
+	height: 85vh;
+	object-fit: cover;
+	box-sizing: border-box;
+	grid-column: 1;
+	filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.24));
 }
 
-.arrow-left:hover, .arrow-right:hover {
-    opacity: 1;
+.info {
+	align-self: center;
+	color: white;
+	white-space: pre-wrap;
 }
 
-.arrow-left img {
-    height: calc(1.3vw + 1.3vh);
-    transform: rotate(90deg);
+.info h1 {
+	font-size: calc(2.5vh + 2.5vw);
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.37);
+	text-transform:uppercase;
 }
 
-.arrow-right img {
-    height: calc(1.3vw + 1.3vh);
-    transform: rotate(-90deg);
+.info p {
+	width: 80%;
+	box-sizing: content-box;
+	font-size: calc(1vh + 1vw);
+	font-weight: 100;
 }

@@ -3,8 +3,9 @@ html, body {
     scrollbar-width: none;  /* Firefox */
     scroll-behavior:smooth;
 	max-width: 100%;
-    overflow-x: hidden;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
+	background-color: rgba(24,24,24,255);
+	margin: 0;
 }
 
 body::-webkit-scrollbar { 
@@ -34,32 +35,13 @@ body::-webkit-scrollbar {
 }
 
 #root {
-	display: flex;
+	display: grid;
+	grid-template-rows: repeat(3, 100vh);
 	flex-direction: column;
 	height: 100vh;
-	margin: 0px 35px;
     font-family: Rubik;
 	user-select: none;
 	justify-items: center;
+	justify-content: center;
 	overflow-x: none;
-}
-
-.background {
-	position:absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-
-#particles {
-	display: block;
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -10;
-	opacity: 0;
-	animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
