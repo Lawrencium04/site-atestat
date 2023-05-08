@@ -28,7 +28,33 @@
 	}
 }
 
+@media only screen and (max-width: 800px) {
+	#structure {
+		grid-template-columns: 90vw !important;
+		grid-template-rows: 70vh 30vh !important;
+		max-height: 100vh !important;
+	}
 
+	.guitar {
+		grid-row: 1 !important;
+		grid-column: 1 !important;
+		height: 100% !important;
+		width: 100% !important;
+		box-sizing: border-box !important;
+		object-fit:scale-down !important;
+	}
+
+	.info {
+		grid-row: 2 !important;
+		grid-column: 1 !important;
+		align-self: flex-start !important;
+	}
+
+	.info h1 {
+		margin: 0 !important;
+	}
+
+}
 
 #structure {
     display: grid;
@@ -79,6 +105,7 @@ img[id="arrL disabled"], img[id="arrR disabled"] {
 	justify-self: flex-end;
 	align-self: center;
 	height: 85vh;
+	width: 80%;
 	object-fit: cover;
 	box-sizing: border-box;
 	grid-column: 1;
