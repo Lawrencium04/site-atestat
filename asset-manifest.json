@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/site-atestat/static/css/main.08df078b.css",
-    "main.js": "/site-atestat/static/js/main.89cb535e.js",
+    "main.css": "/site-atestat/static/css/main.c0687826.css",
+    "main.js": "/site-atestat/static/js/main.57f75296.js",
     "static/media/BackgroundImg.png": "/site-atestat/static/media/BackgroundImg.3027d5f0fdbfddee1dcd.png",
+    "static/media/Gibson.png": "/site-atestat/static/media/Gibson.c5e747a1921f43f5aa47.png",
+    "static/media/Yamaha.png": "/site-atestat/static/media/Yamaha.47ac7350278add9d43d6.png",
     "static/media/GuitarBody.png": "/site-atestat/static/media/GuitarBody.256a7812b732df0a2248.png",
     "static/media/GuitarHeadstock.png": "/site-atestat/static/media/GuitarHeadstock.766c931f17f18a0d1ab3.png",
     "static/media/GuitarNeck.png": "/site-atestat/static/media/GuitarNeck.9200314f42032b4193b1.png",
     "static/media/Guitar.png": "/site-atestat/static/media/Guitar.71c68df9b11ac4b32aa6.png",
+    "static/media/epiphone.png": "/site-atestat/static/media/epiphone.07dbd4a9496469c11638.png",
     "static/media/arrow-right.png": "/site-atestat/static/media/arrow-right.fb87489aa864f69b61c7.png",
     "static/media/arrow-left.png": "/site-atestat/static/media/arrow-left.f09f921f795db684bca3.png",
     "static/media/Logo.svg": "/site-atestat/static/media/Logo.b48a83b52ef47ff06d7e637d59d851ef.svg",
     "index.html": "/site-atestat/index.html",
-    "main.08df078b.css.map": "/site-atestat/static/css/main.08df078b.css.map",
-    "main.89cb535e.js.map": "/site-atestat/static/js/main.89cb535e.js.map"
+    "main.c0687826.css.map": "/site-atestat/static/css/main.c0687826.css.map",
+    "main.57f75296.js.map": "/site-atestat/static/js/main.57f75296.js.map"
   },
   "entrypoints": [
-    "static/css/main.08df078b.css",
-    "static/js/main.89cb535e.js"
+    "static/css/main.c0687826.css",
+    "static/js/main.57f75296.js"
   ]
 }
