@@ -1,28 +1,99 @@
+@media only screen and (max-width: 800px) {
+    #top {
+        grid-template-rows: 20vh repeat(3, min-content) !important;
+        grid-template-columns: 95vw !important;
+        overflow: visible !important;
+    }
+
+    .beginner, .friends, .overall {
+        grid-template-rows: 10vh auto 13vh !important;
+    }
+
+    .head {
+        grid-column: 1 !important;
+    }
+
+    .beginner {
+        grid-row: 2 !important;
+        grid-column: 1 !important;
+    }
+
+    .friends {
+        grid-row: 3 !important;
+        grid-column: 1 !important;
+
+    }
+
+    .overall {
+        grid-row: 4 !important;
+        grid-column: 1 !important;
+    }
+
+    #top img {
+        width: 100% !important;
+        height: 100% !important;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+    }
+
+    #top h1:not(.head) {
+        font-size: calc(2.3vh + 2.3vw) !important;
+    }
+}
+
 #top {
     display: grid;
-    grid-template-rows: 100vh;
+    grid-template-rows: auto min-content;
     grid-template-columns: repeat(3, 31vw);
     place-items: center;
     color: white;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .beginner, .friends, .overall {
     display: grid;
-    width: 95%;
+    width: 100%;
     box-sizing: border-box;
-    grid-template-rows: min-content min-content auto;
+    grid-template-rows: 20vh min-content 20vh;
+    grid-template-columns: 100%;
     place-items: center;
     text-align: center;
+    justify-content: center;
+    grid-row: 2;
 }
 
-#top h1 {
+.beginner img {
+    filter: invert(2%);
+}
+
+#top h1:not(.head) {
+    font-size: calc(1.7vh + 1.7vw);
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.26));
+    align-self: flex-end;
+    font-weight: 400;
+    margin: 0;
 }
 
 #top img {
-    height: calc(13vh + 13vw);
+    height: calc(18vh + 18vw);
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.459));
 }
 
 #top p {
     font-weight: 100;
+    align-self: flex-start;
+    width: 90%;
+    box-sizing: content-box;
+	font-size: calc(1vh + 1vw);
+    margin: 0;
+}
+
+.head {
+	font-size: calc(2.5vh + 2.5vw);
+    margin-bottom: 0;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.26));
+    grid-row: 1;
+    grid-column: 2;
+    place-self: center;
 }
