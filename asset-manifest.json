@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/site-atestat/static/css/main.c0687826.css",
-    "main.js": "/site-atestat/static/js/main.28807dc2.js",
+    "main.css": "/site-atestat/static/css/main.7df44656.css",
+    "main.js": "/site-atestat/static/js/main.45aeb24a.js",
     "static/media/BackgroundImg.png": "/site-atestat/static/media/BackgroundImg.3027d5f0fdbfddee1dcd.png",
     "static/media/Gibson.png": "/site-atestat/static/media/Gibson.c5e747a1921f43f5aa47.png",
     "static/media/Yamaha.png": "/site-atestat/static/media/Yamaha.47ac7350278add9d43d6.png",
@@ -14,11 +14,11 @@
     "static/media/arrow-left.png": "/site-atestat/static/media/arrow-left.f09f921f795db684bca3.png",
     "static/media/Logo.svg": "/site-atestat/static/media/Logo.b48a83b52ef47ff06d7e637d59d851ef.svg",
     "index.html": "/site-atestat/index.html",
-    "main.c0687826.css.map": "/site-atestat/static/css/main.c0687826.css.map",
-    "main.28807dc2.js.map": "/site-atestat/static/js/main.28807dc2.js.map"
+    "main.7df44656.css.map": "/site-atestat/static/css/main.7df44656.css.map",
+    "main.45aeb24a.js.map": "/site-atestat/static/js/main.45aeb24a.js.map"
   },
   "entrypoints": [
-    "static/css/main.c0687826.css",
-    "static/js/main.28807dc2.js"
+    "static/css/main.7df44656.css",
+    "static/js/main.45aeb24a.js"
   ]
 }
