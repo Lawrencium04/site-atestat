@@ -8,7 +8,7 @@ export default function Tops(props) {
     return (
         <>
             <div id="top">
-                <h1 className="head">RECOMANDATIONS</h1>
+                <h1 className="head">RECOMMENDATIONS</h1>
                 <div className="beginner">
                     <h1>EPIPHONE DR-100</h1>
                     <img src={guitar}/>

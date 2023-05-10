@@ -26,7 +26,7 @@ export default function Navbar(props) {
             <ul className="links" id="Links">
                 <NavButton id={1} index={index} scrollTo="home" onClick={() => changePage(1)} label="HOME"/>
                 <NavButton id={2} index={index} scrollTo="structure" onClick={() => changePage(2)} label="STRUCTURE"/>
-                <NavButton id={3} index={index} scrollTo="top" onClick={() => changePage(3)} label="TOP"/>
+                <NavButton id={3} index={index} scrollTo="recommendations" onClick={() => changePage(3)} label="TOP"/>
             </ul>
             <div href="/" className="icon" onClick={handleMenuButton}>
                 <img src={icon} alt=""/>
