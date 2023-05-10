@@ -58,7 +58,7 @@
 	grid-area: icon;
 	padding: 0;
 	list-style: none;
-	width: 250px;
+	width: 400px;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	justify-self: end;
